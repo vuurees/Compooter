@@ -17,6 +17,10 @@
   animation: modalFadeIn 0.2s ease both;
 }
 
+.modal-overlay[hidden] {
+  display: none;
+}
+
 @keyframes modalFadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
