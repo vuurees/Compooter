@@ -22,7 +22,7 @@
     <div class="meta-row">
       <a class="source-link" href="index.html">&larr; Dream List</a>
       <span class="clock" id="clock" aria-label="Current time"></span>
-      <a class="source-link" href="https://newegg.io/e46cb7e">View Newegg PC Builder List &rarr;</a>
+      <a class="source-link" id="neweggLink" href="https://newegg.io/e46cb7e">View Newegg PC Builder List &rarr;</a>
     </div>
   </header>
 
@@ -122,6 +122,24 @@
 </div>
 
 <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<div class="modal-overlay" id="donateModal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle">
+    <button type="button" class="modal-close" id="donateModalClose" aria-label="Close">&#10005;</button>
+    <h2 id="donateModalTitle">Before you buy&hellip;</h2>
+    <p class="modal-lead">That's a lot of money for a PC. Here are some organizations that could put it to better use:</p>
+    <ul class="modal-list">
+      <li><a href="https://www.arthritis.org/about-arthritis?form=FUNMPPXNHEF" target="_blank" rel="noopener noreferrer">Arthritis Foundation</a></li>
+      <li><a href="https://ncctacoma.org/give" target="_blank" rel="noopener noreferrer">NCC Tacoma</a></li>
+      <li><a href="https://foodforthepoor.org/?form=donate-now&utm_campaign=branded-us-exact&gad_source=1&gad_campaignid=22357504241&gbraid=0AAAAAD7W-Q9MD36ljmIwoH-0kCBlimw11&gclid=Cj0KCQjw79nUBhCgARIsADSHka0qZgAiY_me98g0A45T0aDrmamQvg4SeuDA6xxPPyIA_vYI7w2TiHcaAvf6EALw_wcB" target="_blank" rel="noopener noreferrer">Food For The Poor</a></li>
+      <li><a href="https://www.stjude.org/promotion/impact-giving-pm.html?sc_dcm=137187318174&sc_cid=kwp&sc_cat=b&&&&&gclsrc=aw.ds&ds_rl=1285465&ds_rl=1291300&gad_source=1&gad_campaignid=17681679263&gbraid=0AAAAADuyZN4hLUefVtfsNlb4WtYTdUqYu&gclid=Cj0KCQjw79nUBhCgARIsADSHka2OvkUAZWcNH12U38fn5uKfn32yg8DVFNXfnOtNEJM1Z8Pl2jpNVLsaAj0KEALw_wcB" target="_blank" rel="noopener noreferrer">St. Jude Children's Research Hospital</a></li>
+      <li><a href="https://donate.directrelief.org/give/647931?gad_source=1&gad_campaignid=23250834711&gbraid=0AAAAADEzrS9v_pZi3oCsn2lM5vkUuIgyT&gclid=Cj0KCQjw79nUBhCgARIsADSHka29aIfaI-O22GVlhu_1MkNKAYXh7WWHWrkmaktasFkZ81kc4xG4ytkaApG2EALw_wcB#!/donation/checkout" target="_blank" rel="noopener noreferrer">Direct Relief</a></li>
+    </ul>
+    <div class="modal-actions">
+      <a class="btn secondary" id="donateModalContinue" href="https://newegg.io/e46cb7e" target="_blank" rel="noopener noreferrer">Continue to Newegg anyway &rarr;</a>
+    </div>
+  </div>
+</div>
 
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>

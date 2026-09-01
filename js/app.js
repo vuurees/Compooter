@@ -276,6 +276,40 @@
     toast("Cha-ching! Happy building.");
   });
 
+  // --- donate-instead modal ---
+  var neweggLink = document.getElementById("neweggLink");
+  var donateModal = document.getElementById("donateModal");
+  var donateModalClose = document.getElementById("donateModalClose");
+
+  function openDonateModal() {
+    donateModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    donateModalClose.focus();
+  }
+
+  function closeDonateModal() {
+    donateModal.hidden = true;
+    document.body.style.overflow = "";
+    neweggLink.focus();
+  }
+
+  neweggLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    openDonateModal();
+    beep(440);
+  });
+
+  donateModalClose.addEventListener("click", closeDonateModal);
+  document.getElementById("donateModalContinue").addEventListener("click", closeDonateModal);
+
+  donateModal.addEventListener("click", function (e) {
+    if (e.target === donateModal) closeDonateModal();
+  });
+
+  window.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !donateModal.hidden) closeDonateModal();
+  });
+
   partsBody.addEventListener("click", function (e) {
     var btn = e.target.closest(".copy-btn");
     if (!btn) return;
