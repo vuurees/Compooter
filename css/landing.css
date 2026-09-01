@@ -1,0 +1,108 @@
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero p.subtitle {
+  max-width: 40rem;
+  margin: 0.6rem auto 0;
+}
+
+.dream-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dream-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+  animation: fadeIn 0.5s ease both;
+}
+
+.dream-item:nth-child(2) { animation-delay: 0.08s; }
+.dream-item:nth-child(3) { animation-delay: 0.16s; }
+.dream-item:nth-child(4) { animation-delay: 0.24s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+a.dream-item {
+  transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+a.dream-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-2);
+}
+
+.dream-item.is-placeholder {
+  border-style: dashed;
+  opacity: 0.7;
+}
+
+.dream-rank {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+}
+
+.is-placeholder .dream-rank {
+  background: var(--panel-alt);
+  color: var(--muted);
+  border: 1px dashed var(--border);
+}
+
+.dream-item-body { flex: 1; min-width: 0; }
+
+.dream-item-body h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dream-item-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.dream-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.dream-tag.hot { background: rgba(248, 113, 113, 0.15); color: var(--bad); }
+.dream-tag.soon { background: rgba(138, 147, 166, 0.15); color: var(--muted); }
+
+.dream-item-action {
+  flex: none;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .dream-item { flex-wrap: wrap; }
+  .dream-item-action { width: 100%; text-align: right; }
+}
